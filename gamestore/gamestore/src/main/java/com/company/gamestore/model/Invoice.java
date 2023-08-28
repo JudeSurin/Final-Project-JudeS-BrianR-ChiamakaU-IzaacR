@@ -31,7 +31,7 @@ public class Invoice implements Serializable {
     private String city;
 
     @NotEmpty(message = "You must enter a value for state")
-    @Size(max = 20, message = "You must enter a value less than 20 characters for state")
+    @Size(min = 2, max = 2, message = "You must enter a value of 2 characters for state")
     private String state;
 
     @NotEmpty(message = "You must enter a value for zipcode")
