@@ -190,6 +190,9 @@ public class ServiceLayer {
         return invoiceRepository.save(invoice);
     }
 
+    public void deleteInvoiceById(int id) {
+        invoiceRepository.deleteById(id);
+    }
     public Invoice findInvoiceById(int id) {
         Optional<Invoice> invoice = invoiceRepository.findById(id);
         return invoice.isPresent() ? invoice.get() : null;
