@@ -46,7 +46,7 @@ public class T_ShirtController {
         serviceLayer.deleteTShirtById(id);
     }
 
-    @GetMapping("/tShirts/color/{color")
+    @GetMapping("/tShirts/color/{color}")
     @ResponseStatus(HttpStatus.OK)
     public List<T_Shirt> getTShirtByColor(@PathVariable @Valid String color) {
         return serviceLayer.findByColor(color);

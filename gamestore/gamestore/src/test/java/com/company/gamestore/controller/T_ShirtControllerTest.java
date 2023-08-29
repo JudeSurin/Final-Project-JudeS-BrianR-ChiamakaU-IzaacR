@@ -103,4 +103,46 @@ public class T_ShirtControllerTest {
                 .andDo(print())
                 .andExpect(status().isNoContent());
     }
+
+    @Test
+    public void shouldDeleteById() throws Exception{
+        T_Shirt tShirt = new T_Shirt();
+        tShirt.setColor("Blue");
+        tShirt.setPrice(BigDecimal.valueOf(12.99));
+        tShirt.setQuantity(45);
+        tShirt.setSize("Medium");
+        t_shirtRepository.save(tShirt);
+
+        mockMvc.perform(delete("/tShirts/" + tShirt.getId()))
+                .andDo(print())
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    public void shouldGetTShirtByColor() throws Exception{
+        T_Shirt tShirt = new T_Shirt();
+        tShirt.setColor("Blue");
+        tShirt.setPrice(BigDecimal.valueOf(12.99));
+        tShirt.setQuantity(45);
+        tShirt.setSize("Medium");
+        t_shirtRepository.save(tShirt);
+
+        mockMvc.perform(get("/tShirts/color/" + tShirt.getColor()))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    public void shouldGetTShirtBySize() throws Exception{
+        T_Shirt tShirt = new T_Shirt();
+        tShirt.setColor("Blue");
+        tShirt.setPrice(BigDecimal.valueOf(12.99));
+        tShirt.setQuantity(45);
+        tShirt.setSize("Medium");
+        t_shirtRepository.save(tShirt);
+
+        mockMvc.perform(get("/tShirts/size/" + tShirt.getSize()))
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
 }
