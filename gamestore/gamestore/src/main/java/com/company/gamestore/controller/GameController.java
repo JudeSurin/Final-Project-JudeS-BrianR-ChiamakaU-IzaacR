@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@RestController
 public class GameController {
 
     @Autowired
@@ -17,7 +17,7 @@ public class GameController {
 
     @PostMapping("/games")
     @ResponseStatus(HttpStatus.CREATED)
-    public Game createGame(@PathVariable Game game) {
+    public Game createGame(@RequestBody Game game) {
         return serviceLayer.saveGame(game);
     }
 
@@ -58,7 +58,7 @@ public class GameController {
 
     @GetMapping("games/esrb/{esrb}")
     @ResponseStatus(HttpStatus.OK)
-    public List<Game> getGamesByEsrb(@PathVariable String esrb) {
+    public List<Game> getGamesByEsrbRating(@PathVariable String esrb) {
         return serviceLayer.findByEsrbRating(esrb);
     }
 

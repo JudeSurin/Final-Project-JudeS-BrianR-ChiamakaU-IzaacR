@@ -29,13 +29,13 @@ public class ConsoleController{
 
     @GetMapping("/consoles/manufacturer/{manufacturer}")
     @ResponseStatus(HttpStatus.OK)
-    public List<Console> getConsoleByManufacturer(@RequestBody @Valid String manufacturer) {
+    public List<Console> getConsoleByManufacturer(@PathVariable @Valid String manufacturer) {
         return serviceLayer.findByManufacturer(manufacturer);
     }
 
     @PostMapping("/consoles")
     @ResponseStatus(HttpStatus.CREATED)
-    public Console createConsole(@PathVariable @Valid Console console) {
+    public Console createConsole(@RequestBody @Valid Console console) {
         return serviceLayer.saveConsole(console);
     }
 

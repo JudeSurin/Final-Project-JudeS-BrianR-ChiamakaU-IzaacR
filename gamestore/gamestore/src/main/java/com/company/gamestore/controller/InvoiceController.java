@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@RestController
 public class InvoiceController {
 
     @Autowired
@@ -27,24 +27,12 @@ public class InvoiceController {
         return serviceLayer.findAllInvoices();
     }
 
-    @PutMapping("/invoices/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateInvoice(@RequestBody @Valid Invoice invoice, @PathVariable int id) {
-        serviceLayer.saveInvoice(invoice);
-    }
-
-
     @PostMapping("/invoices")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.CREATED)
     public Invoice createInvoice(@RequestBody @Valid Invoice invoice) {
         return serviceLayer.saveInvoice(invoice);
     }
 
-    @DeleteMapping("/invoices/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteInvoice(@PathVariable int id) {
-        serviceLayer.deleteInvoiceById(id);
-    }
 
     @GetMapping("/invoices/customer/{name}")
     @ResponseStatus(HttpStatus.OK)

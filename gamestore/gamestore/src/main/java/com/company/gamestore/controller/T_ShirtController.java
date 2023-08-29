@@ -9,35 +9,34 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@RestController
 public class T_ShirtController {
 
 
     @Autowired
     ServiceLayer serviceLayer;
 
-    @GetMapping("/t_shirts/{id}")
+    @GetMapping("/tShirts/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Invoice getTShirtById(@PathVariable int id) {
+    public T_Shirt getTShirtById(@PathVariable int id) {
         return serviceLayer.findTShirtById(id);
     }
 
     @GetMapping("/tShirts")
     @ResponseStatus(HttpStatus.OK)
-    public List<Invoice> getAllTShirts() {
+    public List<T_Shirt> getAllTShirts() {
         return serviceLayer.findAllTShirts();
     }
 
-    @PutMapping("/tShirts/{id}")
+    @PutMapping("/tShirts")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateInvoice(@RequestBody @Valid Invoice t_shirt, @PathVariable int id) {
+    public void updateInvoice(@RequestBody @Valid T_Shirt t_shirt) {
         serviceLayer.saveTShirt(t_shirt);
     }
 
-
     @PostMapping("/tShirts")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Invoice createTshirt(@RequestBody @Valid T_Shirt tShirt) {
+    @ResponseStatus(HttpStatus.CREATED)
+    public T_Shirt createTShirt(@RequestBody @Valid T_Shirt tShirt) {
         return serviceLayer.saveTShirt(tShirt);
     }
 
@@ -47,4 +46,15 @@ public class T_ShirtController {
         serviceLayer.deleteTShirtById(id);
     }
 
+    @GetMapping("/tShirts/color/{color")
+    @ResponseStatus(HttpStatus.OK)
+    public List<T_Shirt> getTShirtByColor(@PathVariable @Valid String color) {
+        return serviceLayer.findByColor(color);
+    }
+
+    @GetMapping("/tShirts/size/{size}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<T_Shirt> getTShirtBySize(@PathVariable @Valid String size) {
+        return serviceLayer.findBySize(size);
+    }
 }
