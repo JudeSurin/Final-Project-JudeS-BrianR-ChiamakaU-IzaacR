@@ -107,4 +107,17 @@ public class Console implements Serializable {
     public int hashCode() {
         return Objects.hash(id, model, manufacturer, memory_amount, processor, price, quantity);
     }
+
+    @Override
+    public String toString() {
+        return "Console{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", memory_amount='" + memory_amount + '\'' +
+                ", processor='" + processor + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

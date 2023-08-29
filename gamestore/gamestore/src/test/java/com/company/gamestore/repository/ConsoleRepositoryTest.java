@@ -27,7 +27,7 @@ public class ConsoleRepositoryTest {
         console.setManufacturer("sony");
         console.setMemory_amount("825GB");
         console.setProcessor("AMD Zen 2 CPU");
-        console.setPrice(BigDecimal.valueOf(500));
+        console.setPrice(new BigDecimal("500.00"));
         console.setQuantity(1);
 
         console = consoleRepository.save(console);
@@ -43,7 +43,7 @@ public class ConsoleRepositoryTest {
         console.setManufacturer("sony");
         console.setMemory_amount("825GB");
         console.setProcessor("AMD Zen 2 CPU");
-        console.setPrice(BigDecimal.valueOf(500));
+        console.setPrice(new BigDecimal("500.00"));
         console.setQuantity(1);
 
         console = consoleRepository.save(console);
@@ -85,12 +85,12 @@ public class ConsoleRepositoryTest {
         console.setManufacturer("sony");
         console.setMemory_amount("825GB");
         console.setProcessor("AMD Zen 2 CPU");
-        console.setPrice(BigDecimal.valueOf(500));
+        console.setPrice(new BigDecimal("500.00"));
         console.setQuantity(1);
 
         console = consoleRepository.save(console);
 
-        console.setPrice(BigDecimal.valueOf(400));
+        console.setPrice(new BigDecimal("400.00"));
 
         consoleRepository.save(console);
 

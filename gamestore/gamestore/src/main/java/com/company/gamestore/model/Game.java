@@ -25,7 +25,8 @@ public class Game implements Serializable {
 
     @NotEmpty(message = "You must enter a value for ESRB Rating")
     @Size(max = 50, message = "You must enter a value less than 50 characters for ESRB Rating")
-    private String esrb_rating;
+    @Column(name="esrb_rating")
+    private String esrbRating;
 
     @NotEmpty(message = "You must enter a value for description")
     @Size(max = 255, message = "You must enter a value less than 255 characters for description")
@@ -57,12 +58,12 @@ public class Game implements Serializable {
         this.title = title;
     }
 
-    public String getEsrb_rating() {
-        return esrb_rating;
+    public String getEsrbRating() {
+        return esrbRating;
     }
 
-    public void setEsrb_rating(String esrb_rating) {
-        this.esrb_rating = esrb_rating;
+    public void setEsrbRating(String esrbRating) {
+        this.esrbRating = esrbRating;
     }
 
     public String getDescription() {
@@ -102,11 +103,11 @@ public class Game implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return id == game.id && quantity == game.quantity && title.equals(game.title) && esrb_rating.equals(game.esrb_rating) && description.equals(game.description) && price.equals(game.price) && studio.equals(game.studio);
+        return id == game.id && quantity == game.quantity && Objects.equals(title, game.title) && Objects.equals(esrbRating, game.esrbRating) && Objects.equals(description, game.description) && Objects.equals(price, game.price) && Objects.equals(studio, game.studio);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, esrb_rating, description, price, studio, quantity);
+        return Objects.hash(id, title, esrbRating, description, price, studio, quantity);
     }
 }

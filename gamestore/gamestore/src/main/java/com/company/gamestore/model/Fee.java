@@ -16,17 +16,18 @@ public class Fee implements Serializable {
     @Id
     @NotEmpty(message = "You must enter a value for product type")
     @Size(max = 50, message = "You must enter a value less than 50 characters for product type")
-    private String product_type;
+    @Column(name="product_type")
+    private String productType;
 
     @Column(precision = 8, scale = 2)
     private BigDecimal fee;
 
-    public String getProduct_type() {
-        return product_type;
+    public String getProductType() {
+        return productType;
     }
 
-    public void setProduct_type(String product_type) {
-        this.product_type = product_type;
+    public void setProductType(String productType) {
+        this.productType = productType;
     }
 
     public BigDecimal getFee() {
@@ -42,11 +43,11 @@ public class Fee implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Fee fee1 = (Fee) o;
-        return product_type.equals(fee1.product_type) && fee.equals(fee1.fee);
+        return Objects.equals(productType, fee1.productType) && Objects.equals(fee, fee1.fee);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(product_type, fee);
+        return Objects.hash(productType, fee);
     }
 }

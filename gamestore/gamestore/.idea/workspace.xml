@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Fee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/ConsoleRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/ConsoleRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Console.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Fee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Fee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/service/ServiceLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/service/ServiceLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/GameControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/GameControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/ConsoleRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/ConsoleRepositoryTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2UdUpY6urqXSB2lTBGPKqAJwSbz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/izaacramirez/Desktop/Final-Project-JudeS-BrianR-ChiamakaU-IzaacR/gamestore/gamestore&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.ConsoleRepositoryTest.updateConsoleTest">
+    <configuration name="GamestoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.GamestoreApplication" />
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsoleRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsoleRepositoryTest.createConsoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
+      <option name="METHOD_NAME" value="createConsoleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsoleRepositoryTest.getConsoleByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
+      <option name="METHOD_NAME" value="getConsoleByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsoleRepositoryTest.updateConsoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
+      <option name="METHOD_NAME" value="updateConsoleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ConsoleRepositoryTest.updateConsoleTest" />
+        <item itemvalue="JUnit.ConsoleRepositoryTest" />
+        <item itemvalue="JUnit.ConsoleRepositoryTest.getConsoleByIdTest" />
+        <item itemvalue="JUnit.ConsoleRepositoryTest.createConsoleTest" />
+        <item itemvalue="Application.GamestoreApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" name="Changes" comment="" />
+      <created>1693269135639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693269135639</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

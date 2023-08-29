@@ -4,12 +4,13 @@ import com.company.gamestore.model.*;
 import com.company.gamestore.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+@Service
 public class ServiceLayer {
     private ConsoleRepository consoleRepository;
     private TaxRepository taxRepository;

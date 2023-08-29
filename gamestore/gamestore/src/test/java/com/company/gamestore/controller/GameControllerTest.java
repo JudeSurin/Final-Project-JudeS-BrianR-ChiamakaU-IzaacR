@@ -47,7 +47,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         String inputJson = mapper.writeValueAsString(game);
@@ -67,7 +67,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         mockMvc.perform(get("/games/" + game.getId()))
@@ -83,7 +83,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         mockMvc.perform(get("/games"))
@@ -99,7 +99,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         game.setQuantity(10);
@@ -122,7 +122,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         mockMvc.perform(delete("/games/" + game.getId()))
@@ -138,7 +138,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         mockMvc.perform(get("/games/studio/" + game.getStudio()))
@@ -154,10 +154,10 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
-        mockMvc.perform(get("/games/esrb/" + game.getEsrb_rating()))
+        mockMvc.perform(get("/games/esrb/" + game.getEsrbRating()))
                 .andDo(print())
                 .andExpect(status().isOk());
     }
@@ -170,7 +170,7 @@ public class GameControllerTest {
         game.setDescription("A game about puzzles");
         game.setTitle("Puzzlemania");
         game.setStudio("E3 Games");
-        game.setEsrb_rating("E");
+        game.setEsrbRating("E");
         gameRepository.save(game);
 
         mockMvc.perform(get("/games/title/" + game.getTitle()))
