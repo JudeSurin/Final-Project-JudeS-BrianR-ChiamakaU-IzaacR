@@ -128,7 +128,7 @@ public class ConsoleRepositoryTest {
 
         console = consoleRepository.save(console);
 
-        List<Console> retrievedConsole = consoleRepository.findByManufacturer(console.getManufacturer());
+        List<Console> retrievedConsole = consoleRepository.findByManufacturer("sony");
         assertEquals(retrievedConsole.size(), 1);
     }
 }

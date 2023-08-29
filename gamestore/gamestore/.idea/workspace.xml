@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Fee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Fee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/GameControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/GameControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/ConsoleRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/ConsoleRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Console.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Console.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Fee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Fee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/model/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/company/gamestore/service/ServiceLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/company/gamestore/service/ServiceLayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/GameControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/GameControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/FeeRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/FeeRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/GameRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/GameRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/T_ShirtRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/T_ShirtRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/ConsoleRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/ConsoleRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/GameRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/GameRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/InvoiceRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/InvoiceRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/T_ShirtRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/T_ShirtRepositoryTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +47,8 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/izaacramirez/Desktop/Final-Project-JudeS-BrianR-ChiamakaU-IzaacR/gamestore/gamestore&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ConsoleRepositoryTest.updateConsoleTest">
-    <configuration name="GamestoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.GamestoreApplication" />
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsoleRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InvoiceRepositoryTest.getInvoiceByCustomerNameTest">
+    <configuration name="InvoiceRepositoryTest.createInvoiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
@@ -73,29 +57,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsoleRepositoryTest.createConsoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
-      <option name="METHOD_NAME" value="createConsoleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.InvoiceRepositoryTest" />
+      <option name="METHOD_NAME" value="createInvoiceTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsoleRepositoryTest.getConsoleByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceRepositoryTest.getAllInvoicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +73,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
-      <option name="METHOD_NAME" value="getConsoleByIdTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.InvoiceRepositoryTest" />
+      <option name="METHOD_NAME" value="getAllInvoicesTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsoleRepositoryTest.updateConsoleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InvoiceRepositoryTest.getInvoiceByCustomerNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
@@ -120,8 +89,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
-      <option name="METHOD_NAME" value="updateConsoleTest" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.InvoiceRepositoryTest" />
+      <option name="METHOD_NAME" value="getInvoiceByCustomerNameTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvoiceRepositoryTest.getInvoiceByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.InvoiceRepositoryTest" />
+      <option name="METHOD_NAME" value="getInvoiceByIdTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="T_ShirtRepositoryTest.getTShirtByColorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.T_ShirtRepositoryTest" />
+      <option name="METHOD_NAME" value="getTShirtByColorTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConsoleRepositoryTest.updateConsoleTest" />
-        <item itemvalue="JUnit.ConsoleRepositoryTest" />
-        <item itemvalue="JUnit.ConsoleRepositoryTest.getConsoleByIdTest" />
-        <item itemvalue="JUnit.ConsoleRepositoryTest.createConsoleTest" />
-        <item itemvalue="Application.GamestoreApplication" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest.getInvoiceByCustomerNameTest" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest.getAllInvoicesTest" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest.getInvoiceByIdTest" />
+        <item itemvalue="JUnit.InvoiceRepositoryTest.createInvoiceTest" />
+        <item itemvalue="JUnit.T_ShirtRepositoryTest.getTShirtByColorTest" />
       </list>
     </recent_temporary>
   </component>
