@@ -1,9 +1,9 @@
 type Game{
     id:Int
     title:String
-    esrb_rating:String
+    esrbRating:String
     description:String
-    price:Int
+    price:String
     studio:String
     quantity:Int
 }
@@ -14,7 +14,7 @@ type Console{
     manufacturer:String
     memory_amount:String
     processor:String
-    price:Int
+    price:String
     quantity:Int
 }
 
@@ -22,7 +22,7 @@ type Query{
     findGameById(id:Int): Game
     findAllGames: [Game]
     findGameByTitle(title:String): [Game]
-    findGameByEsrbRating(esrb_rating:String): [Game]
+    findGameByEsrbRating(esrbRating:String): [Game]
     findGameByStudio(studio:String): [Game]
     findConsoleById(id:Int): Console
     findAllConsoles: [Console]
