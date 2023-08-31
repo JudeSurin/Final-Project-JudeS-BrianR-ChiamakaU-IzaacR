@@ -6,21 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/InvoiceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/InvoiceControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/service/ServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/service/ServiceLayerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/InvoiceControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/controller/InvoiceControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/InvoiceRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/repository/InvoiceRepositoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/service/ServiceLayerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/company/gamestore/service/ServiceLayerTest.class" afterDir="false" />
     </list>
-    <list id="91024d02-a9d6-45f6-bd27-0cad5200abf2" name="Changes by brian" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Invoice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/gamestore/service/ServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/InvoiceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/InvoiceControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/gamestore/service/ServiceLayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/gamestore/service/ServiceLayerTest.java" afterDir="false" />
-    </list>
+    <list id="91024d02-a9d6-45f6-bd27-0cad5200abf2" name="Changes by brian" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,74 +17,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/test/java/com/company/gamestore/controller/InvoiceControllerTest.java">
-      <ranges>
-        <range start1="50" end1="52" start2="50" end2="52" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="72" end1="74" start2="72" end2="74" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="90" end1="92" start2="90" end2="92" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="108" end1="110" start2="108" end2="110" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/com/company/gamestore/model/Invoice.java">
-      <ranges>
-        <range start1="42" end1="43" start2="42" end2="44" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="45" end1="46" start2="46" end2="48" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="47" end1="49" start2="49" end2="51" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="59" end1="61" start2="61" end2="63" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="113" end1="115" start2="115" end2="117" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="117" end1="119" start2="119" end2="121" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="121" end1="123" start2="123" end2="125" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="125" end1="127" start2="127" end2="129" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="129" end1="131" start2="131" end2="133" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="133" end1="135" start2="135" end2="137" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="161" end1="163" start2="163" end2="165" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="165" end1="167" start2="167" end2="169" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="182" end1="183" start2="184" end2="185" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="187" end1="188" start2="189" end2="190" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/test/java/com/company/gamestore/service/ServiceLayerTest.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="18" end1="18" start2="19" end2="20" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="102" end1="105" start2="104" end2="107" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="106" end1="110" start2="108" end2="112" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="117" end1="120" start2="119" end2="122" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="121" end1="125" start2="123" end2="127" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="225" end1="226" start2="227" end2="228" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="227" end1="228" start2="229" end2="230" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="294" end1="295" start2="296" end2="297" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="310" end1="311" start2="312" end2="313" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="326" end1="327" start2="328" end2="329" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="384" end1="385" start2="386" end2="387" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="398" end1="399" start2="400" end2="401" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="411" end1="414" start2="413" end2="416" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="415" end1="419" start2="417" end2="421" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="434" end1="437" start2="436" end2="439" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="438" end1="442" start2="440" end2="444" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="457" end1="460" start2="459" end2="462" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="461" end1="465" start2="463" end2="467" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="480" end1="483" start2="482" end2="485" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="484" end1="488" start2="486" end2="490" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="492" end1="493" start2="494" end2="495" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/test/java/com/company/gamestore/repository/InvoiceRepositoryTest.java">
-      <ranges>
-        <range start1="35" end1="38" start2="35" end2="38" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="41" end1="42" start2="41" end2="42" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="58" end1="61" start2="58" end2="61" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="64" end1="65" start2="64" end2="65" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="81" end1="84" start2="81" end2="84" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="87" end1="88" start2="87" end2="88" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="99" end1="102" start2="99" end2="102" changelist="91024d02-a9d6-45f6-bd27-0cad5200abf2" />
-        <range start1="105" end1="106" start2="105" end2="106" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="123" end1="126" start2="123" end2="126" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-        <range start1="129" end1="130" start2="129" end2="130" changelist="ba21a9bf-6b59-4276-b3a6-a1775ec55ae9" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -120,7 +41,20 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/izaacramirez/Desktop/Final-Project-JudeS-BrianR-ChiamakaU-IzaacR/gamestore/gamestore&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ServiceLayerTest">
+  <component name="RunManager" selected="JUnit.ServiceLayerTest.shouldFindByTitle">
+    <configuration name="GamestoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.GamestoreApplication" />
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
@@ -132,38 +66,6 @@
       <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
       <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLayerTest.shouldFindAllInvoices" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="shouldFindAllInvoices" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLayerTest.shouldFindByManufacturer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="shouldFindByManufacturer" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -184,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServiceLayerTest.shouldFindInvoiceById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceLayerTest.shouldFindBySize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
@@ -194,7 +96,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
       <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="shouldFindInvoiceById" />
+      <option name="METHOD_NAME" value="shouldFindBySize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayerTest.shouldFindByTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindByTitle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -202,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceLayerTest" />
-        <item itemvalue="JUnit.ServiceLayerTest.shouldFindByManufacturer" />
-        <item itemvalue="JUnit.ServiceLayerTest.shouldFindAllInvoices" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindByTitle" />
         <item itemvalue="JUnit.ServiceLayerTest.shouldFindByName" />
-        <item itemvalue="JUnit.ServiceLayerTest.shouldFindInvoiceById" />
+        <item itemvalue="JUnit.ServiceLayerTest" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindBySize" />
+        <item itemvalue="Application.GamestoreApplication" />
       </list>
     </recent_temporary>
   </component>

@@ -61,6 +61,7 @@ public class ServiceLayerTest {
         doReturn(console).when(consoleRepository).save(console2);
         doReturn(Optional.of(console)).when(consoleRepository).findById(1);
         doReturn(consoleList).when(consoleRepository).findAll();
+        doReturn(consoleList).when(consoleRepository).findByManufacturer("sony");
 
     }
 
@@ -90,6 +91,10 @@ public class ServiceLayerTest {
         doReturn(game).when(gameRepository).save(game2);
         doReturn(Optional.of(game)).when(gameRepository).findById(1);
         doReturn(gameList).when(gameRepository).findAll();
+        doReturn(gameList).when(gameRepository).findByStudio("Santa Monica Studio");
+        doReturn(gameList).when(gameRepository).findByEsrbRating("Pegi 18");
+        doReturn(gameList).when(gameRepository).findByTitle("God of war");
+
 
     }
 
@@ -104,12 +109,7 @@ public class ServiceLayerTest {
         invoice.setZipcode("90650");
         invoice.setItemType("Game");
         invoice.setItemId(562);
-        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        //invoice.setSubtotal(new BigDecimal(60.00));
-        //invoice.setTax(new BigDecimal(0.72));
-        //invoice.setProcessing_fee(new BigDecimal(1.20));
-        //invoice.setTotal(new BigDecimal(62.54));
 
         Invoice invoice2 = new Invoice();
         invoice2.setName("Izaac Ramirez");
@@ -119,12 +119,7 @@ public class ServiceLayerTest {
         invoice2.setZipcode("90650");
         invoice2.setItemType("Game");
         invoice2.setItemId(562);
-        //invoice2.setUnit_price(new BigDecimal(0.62));
         invoice2.setQuantity(1);
-        //invoice2.setSubtotal(new BigDecimal(60.00));
-        //invoice2.setTax(new BigDecimal(0.72));
-        //invoice2.setProcessing_fee(new BigDecimal(1.20));
-        //invoice2.setTotal(new BigDecimal(62.54));
 
         List<Invoice> invoiceList =  new ArrayList<>();
         invoiceList.add(invoice);
@@ -132,6 +127,7 @@ public class ServiceLayerTest {
         doReturn(invoice).when(invoiceRepository).save(invoice2);
         doReturn(Optional.of(invoice)).when(invoiceRepository).findById(1);
         doReturn(invoiceList).when(invoiceRepository).findAll();
+        doReturn(invoiceList).when(invoiceRepository).findByName("Izaac Ramirez");
 
     }
 
@@ -158,6 +154,8 @@ public class ServiceLayerTest {
         doReturn(TShirt).when(t_shirtRepository).save(TShirt2);
         doReturn(Optional.of(TShirt)).when(t_shirtRepository).findById(1);
         doReturn(tShirtList).when(t_shirtRepository).findAll();
+        doReturn(tShirtList).when(t_shirtRepository).findByColor("Black");
+        doReturn(tShirtList).when(t_shirtRepository).findBySize("XL");
     }
 
     //Console Api
@@ -315,6 +313,7 @@ public class ServiceLayerTest {
 
     @Test
     public void shouldFindByTitle(){
+        List<Game> gameList = new ArrayList<>();
         Game game = new Game();
         game.setTitle("God of war");
         game.setEsrbRating("Pegi 18");
@@ -323,10 +322,10 @@ public class ServiceLayerTest {
         game.setStudio("Santa Monica Studio");
         game.setQuantity(1);
 
-        game = service.saveGame(game);
+        gameList.add(game);
 
-        List<Game> tempGame = service.findByTitle(game.getTitle());
-        assertEquals(tempGame.size(),1);
+        List<Game> tempGameList = service.findByTitle(game.getTitle());
+        assertEquals(tempGameList, gameList);
     }
 
     //T_Shirt Api
@@ -375,6 +374,8 @@ public class ServiceLayerTest {
 
     @Test
     public void shouldFindByColor(){
+        List<T_Shirt> shirtList = new ArrayList<>();
+
         T_Shirt TShirt = new T_Shirt();
         TShirt.setSize("XL");
         TShirt.setColor("Black");
@@ -382,23 +383,28 @@ public class ServiceLayerTest {
         TShirt.setPrice(new BigDecimal(30.00));
         TShirt.setQuantity(2);
 
-        TShirt = service.saveTShirt(TShirt);
+        shirtList.add(TShirt);
+
         List<T_Shirt> tShirtList = service.findByColor(TShirt.getColor());
-        assertEquals(tShirtList.size(), 1);
+        assertEquals(tShirtList, shirtList);
     }
 
     @Test
     public void shouldFindBySize(){
+        List<T_Shirt> shirtList = new ArrayList<>();
+
         T_Shirt TShirt = new T_Shirt();
         TShirt.setSize("XL");
         TShirt.setColor("Black");
         TShirt.setDescription("Black tshirt with naruto on it");
         TShirt.setPrice(new BigDecimal(30.00));
         TShirt.setQuantity(2);
-
         TShirt = service.saveTShirt(TShirt);
+
+        shirtList.add(TShirt);
+
         List<T_Shirt> tShirtList = service.findBySize(TShirt.getSize());
-        assertEquals(tShirtList.size(), 1);
+        assertEquals(tShirtList, shirtList);
     }
 
     //Invoice Api
@@ -413,12 +419,7 @@ public class ServiceLayerTest {
         invoice.setZipcode("90650");
         invoice.setItemType("Game");
         invoice.setItemId(562);
-        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        //invoice.setSubtotal(new BigDecimal(60.00));
-        //invoice.setTax(new BigDecimal(0.72));
-        //invoice.setProcessing_fee(new BigDecimal(1.20));
-        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -436,12 +437,7 @@ public class ServiceLayerTest {
         invoice.setZipcode("90650");
         invoice.setItemType("Game");
         invoice.setItemId(562);
-        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        //invoice.setSubtotal(new BigDecimal(60.00));
-        //invoice.setTax(new BigDecimal(0.72));
-        //invoice.setProcessing_fee(new BigDecimal(1.20));
-        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -459,12 +455,7 @@ public class ServiceLayerTest {
         invoice.setZipcode("90650");
         invoice.setItemType("Game");
         invoice.setItemId(562);
-        //invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        //invoice.setSubtotal(new BigDecimal(60.00));
-        //invoice.setTax(new BigDecimal(0.72));
-        //invoice.setProcessingFee(new BigDecimal(1.20));
-        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -474,6 +465,7 @@ public class ServiceLayerTest {
 
     @Test
     public void shouldFindByName(){
+        List<Invoice> invoiceList = new ArrayList<>();
         Invoice invoice = new Invoice();
         invoice.setName("Izaac Ramirez");
         invoice.setState("Elmcroft Ave");
@@ -482,17 +474,12 @@ public class ServiceLayerTest {
         invoice.setZipcode("90650");
         invoice.setItemType("Game");
         invoice.setItemId(562);
-        //invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        //invoice.setSubtotal(new BigDecimal(60.00));
-        //invoice.setTax(new BigDecimal(0.72));
-        //invoice.setProcessingFee(new BigDecimal(1.20));
-        //invoice.setTotal(new BigDecimal(62.54));
 
-        invoice = service.saveInvoice(invoice);
+        invoiceList.add(invoice);
 
-        List<Invoice> invoiceList = service.findByName(invoice.getName());
-        assertEquals(invoiceList.size(), 1);
+        List<Invoice> invoiceList2 = service.findByName(invoice.getName());
+        assertEquals(invoiceList2, invoiceList);
     }
 
 }
