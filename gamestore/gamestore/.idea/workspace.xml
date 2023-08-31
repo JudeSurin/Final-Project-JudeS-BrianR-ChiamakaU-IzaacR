@@ -40,53 +40,8 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/izaacramirez/Desktop/Final-Project-JudeS-BrianR-ChiamakaU-IzaacR/gamestore/gamestore&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ServiceLayerTest.shouldSaveConsole">
-    <configuration name="ConsoleRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.ConsoleRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.GameRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InvoiceRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.InvoiceRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLayerTest.shouldSaveConsole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ServiceLayerTest">
+    <configuration name="ServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
@@ -96,34 +51,82 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
       <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="shouldSaveConsole" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayerTest.shouldFindAllTShirts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindAllTShirts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="T_ShirtRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceLayerTest.shouldFindByColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.gamestore.repository.*" />
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.repository.T_ShirtRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindByColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayerTest.shouldFindBySize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindBySize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayerTest.shouldSaveInvoice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldSaveInvoice" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ServiceLayerTest.shouldSaveConsole" />
-        <item itemvalue="JUnit.T_ShirtRepositoryTest" />
-        <item itemvalue="JUnit.InvoiceRepositoryTest" />
-        <item itemvalue="JUnit.GameRepositoryTest" />
-        <item itemvalue="JUnit.ConsoleRepositoryTest" />
+        <item itemvalue="JUnit.ServiceLayerTest" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldSaveInvoice" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindBySize" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindByColor" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindAllTShirts" />
       </list>
     </recent_temporary>
   </component>
