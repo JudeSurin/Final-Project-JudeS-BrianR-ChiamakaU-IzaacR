@@ -131,46 +131,46 @@ public class ServiceLayer {
 
         BigDecimal subTotal = BigDecimal.valueOf(0);
 
-        if (invoice.getItem_type().equals("Game")) {
-            Optional<Game> game = gameRepository.findById(invoice.getItem_id());
+        if (invoice.getItemType().equals("Game")) {
+            Optional<Game> game = gameRepository.findById(invoice.getItemId());
 
             if (game.isPresent() && (invoice.getQuantity() <= game.get().getQuantity())) {
                 subTotal = game.get().getPrice().multiply(BigDecimal.valueOf(invoice.getQuantity()));
-                invoice.setUnit_price(game.get().getPrice());
+                invoice.setUnitPrice(game.get().getPrice());
             }
             else {
                 return invoiceRepository.save(invoice);
             }
 
-            invoice.setProcessing_fee(BigDecimal.valueOf(1.49));
+            invoice.setProcessingFee(BigDecimal.valueOf(1.49));
         }
 
-        else if (invoice.getItem_type().equals("Console")) {
-            Optional<Console> console = consoleRepository.findById(invoice.getItem_id());
+        else if (invoice.getItemType().equals("Console")) {
+            Optional<Console> console = consoleRepository.findById(invoice.getItemId());
 
             if (console.isPresent() && (invoice.getQuantity() <= console.get().getQuantity())) {
                 subTotal = console.get().getPrice().multiply(BigDecimal.valueOf(invoice.getQuantity()));
-                invoice.setUnit_price(console.get().getPrice());
+                invoice.setUnitPrice(console.get().getPrice());
             }
             else {
                 return invoiceRepository.save(invoice);
             }
 
-            invoice.setProcessing_fee(BigDecimal.valueOf(14.99));
+            invoice.setProcessingFee(BigDecimal.valueOf(14.99));
         }
 
-        else if (invoice.getItem_type().equals("T-Shirt")) {
-            Optional<T_Shirt> t_shirt = t_shirtRepository.findById(invoice.getItem_id());
+        else if (invoice.getItemType().equals("T-Shirt")) {
+            Optional<T_Shirt> t_shirt = t_shirtRepository.findById(invoice.getItemId());
 
             if (t_shirt.isPresent() && (invoice.getQuantity() <= t_shirt.get().getQuantity())) {
                 subTotal = t_shirt.get().getPrice().multiply(BigDecimal.valueOf(invoice.getQuantity()));
-                invoice.setUnit_price(t_shirt.get().getPrice());
+                invoice.setUnitPrice(t_shirt.get().getPrice());
             }
             else {
                 return invoiceRepository.save(invoice);
             }
 
-            invoice.setProcessing_fee(BigDecimal.valueOf(1.98));
+            invoice.setProcessingFee(BigDecimal.valueOf(1.98));
         }
 
         invoice.setSubtotal(subTotal);
@@ -181,11 +181,11 @@ public class ServiceLayer {
 
         // Add processing fee if over 10 items
         if (invoice.getQuantity() > 10) {
-            invoice.setProcessing_fee(invoice.getProcessing_fee().add(BigDecimal.valueOf(15.49)));
+            invoice.setProcessingFee(invoice.getProcessingFee().add(BigDecimal.valueOf(15.49)));
         }
 
         // Add tax and subTotal for total price
-        BigDecimal total = invoice.getSubtotal().add(invoice.getTax().add(invoice.getProcessing_fee()));
+        BigDecimal total = invoice.getSubtotal().add(invoice.getTax().add(invoice.getProcessingFee()));
         invoice.setTotal(total);
 
         return invoiceRepository.save(invoice);

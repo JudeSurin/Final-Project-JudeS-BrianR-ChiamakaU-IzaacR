@@ -48,8 +48,8 @@ public class InvoiceControllerTest {
         invoice.setCity("Clovis");
         invoice.setState("CA");
         invoice.setZipcode("93612");
-        invoice.setItem_id(269);
-        invoice.setItem_type("Game");
+        invoice.setItemId(269);
+        invoice.setItemType("Game");
         invoice.setQuantity(12);
         invoiceRepository.save(invoice);
 
@@ -70,8 +70,8 @@ public class InvoiceControllerTest {
         invoice.setCity("Clovis");
         invoice.setState("CA");
         invoice.setZipcode("93612");
-        invoice.setItem_id(269);
-        invoice.setItem_type("Game");
+        invoice.setItemId(269);
+        invoice.setItemType("Game");
         invoice.setQuantity(12);
         invoiceRepository.save(invoice);
 
@@ -88,8 +88,8 @@ public class InvoiceControllerTest {
         invoice.setCity("Clovis");
         invoice.setState("CA");
         invoice.setZipcode("93612");
-        invoice.setItem_id(269);
-        invoice.setItem_type("Game");
+        invoice.setItemId(269);
+        invoice.setItemType("Game");
         invoice.setQuantity(12);
         invoiceRepository.save(invoice);
 
@@ -106,8 +106,8 @@ public class InvoiceControllerTest {
         invoice.setCity("Clovis");
         invoice.setState("CA");
         invoice.setZipcode("93612");
-        invoice.setItem_id(269);
-        invoice.setItem_type("Game");
+        invoice.setItemId(269);
+        invoice.setItemType("Game");
         invoice.setQuantity(12);
         invoiceRepository.save(invoice);
 

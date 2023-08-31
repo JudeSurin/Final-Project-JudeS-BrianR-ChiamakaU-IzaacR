@@ -7,6 +7,7 @@ import com.company.gamestore.model.T_Shirt;
 import com.company.gamestore.repository.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@SpringBootTest
 public class ServiceLayerTest {
     ServiceLayer service;
     ConsoleRepository consoleRepository;
@@ -100,14 +102,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         Invoice invoice2 = new Invoice();
         invoice2.setName("Izaac Ramirez");
@@ -115,14 +117,14 @@ public class ServiceLayerTest {
         invoice2.setCity("Norwalk");
         invoice2.setState("CA");
         invoice2.setZipcode("90650");
-        invoice2.setItem_type("Game");
-        invoice2.setItem_id(562);
-        invoice2.setUnit_price(new BigDecimal(0.62));
+        invoice2.setItemType("Game");
+        invoice2.setItemId(562);
+        //invoice2.setUnit_price(new BigDecimal(0.62));
         invoice2.setQuantity(1);
-        invoice2.setSubtotal(new BigDecimal(60.00));
-        invoice2.setTax(new BigDecimal(0.72));
-        invoice2.setProcessing_fee(new BigDecimal(1.20));
-        invoice2.setTotal(new BigDecimal(62.54));
+        //invoice2.setSubtotal(new BigDecimal(60.00));
+        //invoice2.setTax(new BigDecimal(0.72));
+        //invoice2.setProcessing_fee(new BigDecimal(1.20));
+        //invoice2.setTotal(new BigDecimal(62.54));
 
         List<Invoice> invoiceList =  new ArrayList<>();
         invoiceList.add(invoice);
@@ -223,7 +225,7 @@ public class ServiceLayerTest {
 
         console = service.saveConsole(console);
 
-        List<Console> retrievedConsoles = service.findByManufacturer("sony");
+        List<Console> retrievedConsoles = service.findByManufacturer(console.getManufacturer());
 
         assertEquals(retrievedConsoles.size(), 1);
 
@@ -409,14 +411,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -432,14 +434,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -455,14 +457,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessingFee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 
@@ -478,14 +480,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessingFee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         invoice = service.saveInvoice(invoice);
 

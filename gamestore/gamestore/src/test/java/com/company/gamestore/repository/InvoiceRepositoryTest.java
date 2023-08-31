@@ -33,13 +33,13 @@ class InvoiceRepositoryTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
         invoice.setSubtotal(new BigDecimal(60.00));
         invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
+        invoice.setProcessingFee(new BigDecimal(1.20));
         invoice.setTotal(new BigDecimal(62.54));
 
         invoice = invoiceRepository.save(invoice);
@@ -56,13 +56,13 @@ class InvoiceRepositoryTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
         invoice.setSubtotal(new BigDecimal(60.00));
         invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
+        invoice.setProcessingFee(new BigDecimal(1.20));
         invoice.setTotal(new BigDecimal(62.54));
 
         invoice = invoiceRepository.save(invoice);
@@ -79,13 +79,13 @@ class InvoiceRepositoryTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
         invoice.setSubtotal(new BigDecimal(60.00));
         invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
+        invoice.setProcessingFee(new BigDecimal(1.20));
         invoice.setTotal(new BigDecimal(62.54));
 
         invoice = invoiceRepository.save(invoice);
@@ -97,13 +97,13 @@ class InvoiceRepositoryTest {
         invoice2.setCity("Clovis");
         invoice2.setState("CA");
         invoice2.setZipcode("93612");
-        invoice2.setItem_type("Game");
-        invoice2.setItem_id(562);
-        invoice2.setUnit_price(new BigDecimal(0.62));
+        invoice2.setItemType("Game");
+        invoice2.setItemId(562);
+        invoice2.setUnitPrice(new BigDecimal(0.62));
         invoice2.setQuantity(1);
         invoice2.setSubtotal(new BigDecimal(60.00));
         invoice2.setTax(new BigDecimal(0.72));
-        invoice2.setProcessing_fee(new BigDecimal(1.20));
+        invoice2.setProcessingFee(new BigDecimal(1.20));
         invoice2.setTotal(new BigDecimal(62.54));
 
         invoice2 = invoiceRepository.save(invoice2);
@@ -121,13 +121,13 @@ class InvoiceRepositoryTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        invoice.setUnitPrice(new BigDecimal(0.62));
         invoice.setQuantity(1);
         invoice.setSubtotal(new BigDecimal(60.00));
         invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
+        invoice.setProcessingFee(new BigDecimal(1.20));
         invoice.setTotal(new BigDecimal(62.54));
 
         invoice = invoiceRepository.save(invoice);
