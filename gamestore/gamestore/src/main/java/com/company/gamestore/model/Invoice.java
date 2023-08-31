@@ -40,13 +40,15 @@ public class Invoice implements Serializable {
 
     @NotEmpty(message = "You must enter a value for item type")
     @Size(max = 50, message = "You must enter a value less than 50 characters for item type")
-    private String item_type;
+    @Column(name = "item_type")
+    private String itemType;
 
     @NotEmpty(message = "You must enter a value for item id")
-    private int item_id;
+    @Column(name = "item_id")
+    private int itemId;
 
-    @Column(precision = 8, scale = 2)
-    private BigDecimal unit_price;
+    @Column(precision = 8, scale = 2, name = "unit_price")
+    private BigDecimal unitPrice;
 
     @NotEmpty(message = "You must enter a value for quantity")
     private int quantity;
@@ -57,8 +59,8 @@ public class Invoice implements Serializable {
     @Column(precision = 8, scale = 2)
     private BigDecimal tax;
 
-    @Column(precision = 8, scale = 2)
-    private BigDecimal processing_fee;
+    @Column(precision = 8, scale = 2, name = "processing_fee")
+    private BigDecimal processingFee;
 
     @Column(precision = 8, scale = 2)
     private BigDecimal total;
@@ -111,28 +113,28 @@ public class Invoice implements Serializable {
         this.zipcode = zipcode;
     }
 
-    public String getItem_type() {
-        return item_type;
+    public String getItemType() {
+        return itemType;
     }
 
-    public void setItem_type(String item_type) {
-        this.item_type = item_type;
+    public void setItemType(String itemType) {
+        this.itemType = itemType;
     }
 
-    public int getItem_id() {
-        return item_id;
+    public int getItemId() {
+        return itemId;
     }
 
-    public void setItem_id(int item_id) {
-        this.item_id = item_id;
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
     }
 
-    public BigDecimal getUnit_price() {
-        return unit_price;
+    public BigDecimal getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setUnit_price(BigDecimal unit_price) {
-        this.unit_price = unit_price;
+    public void setUnitPrice(BigDecimal unitPrice) {
+        this.unitPrice = unitPrice;
     }
 
     public int getQuantity() {
@@ -159,12 +161,12 @@ public class Invoice implements Serializable {
         this.tax = tax;
     }
 
-    public BigDecimal getProcessing_fee() {
-        return processing_fee;
+    public BigDecimal getProcessingFee() {
+        return processingFee;
     }
 
-    public void setProcessing_fee(BigDecimal processing_fee) {
-        this.processing_fee = processing_fee;
+    public void setProcessingFee(BigDecimal processingFee) {
+        this.processingFee = processingFee;
     }
 
     public BigDecimal getTotal() {
@@ -180,11 +182,11 @@ public class Invoice implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Invoice invoice = (Invoice) o;
-        return id == invoice.id && item_id == invoice.item_id && quantity == invoice.quantity && name.equals(invoice.name) && street.equals(invoice.street) && city.equals(invoice.city) && state.equals(invoice.state) && zipcode.equals(invoice.zipcode) && item_type.equals(invoice.item_type) && unit_price.equals(invoice.unit_price) && subtotal.equals(invoice.subtotal) && tax.equals(invoice.tax) && processing_fee.equals(invoice.processing_fee) && total.equals(invoice.total);
+        return id == invoice.id && itemId == invoice.itemId && quantity == invoice.quantity && Objects.equals(name, invoice.name) && Objects.equals(street, invoice.street) && Objects.equals(city, invoice.city) && Objects.equals(state, invoice.state) && Objects.equals(zipcode, invoice.zipcode) && Objects.equals(itemType, invoice.itemType) && Objects.equals(unitPrice, invoice.unitPrice) && Objects.equals(subtotal, invoice.subtotal) && Objects.equals(tax, invoice.tax) && Objects.equals(processingFee, invoice.processingFee) && Objects.equals(total, invoice.total);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, street, city, state, zipcode, item_type, item_id, unit_price, quantity, subtotal, tax, processing_fee, total);
+        return Objects.hash(id, name, street, city, state, zipcode, itemType, itemId, unitPrice, quantity, subtotal, tax, processingFee, total);
     }
 }

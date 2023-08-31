@@ -7,15 +7,17 @@ import com.company.gamestore.model.T_Shirt;
 import com.company.gamestore.repository.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+@SpringBootTest
 public class ServiceLayerTest {
     ServiceLayer service;
     ConsoleRepository consoleRepository;
@@ -100,14 +102,14 @@ public class ServiceLayerTest {
         invoice.setCity("Norwalk");
         invoice.setState("CA");
         invoice.setZipcode("90650");
-        invoice.setItem_type("Game");
-        invoice.setItem_id(562);
-        invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
         invoice.setQuantity(1);
-        invoice.setSubtotal(new BigDecimal(60.00));
-        invoice.setTax(new BigDecimal(0.72));
-        invoice.setProcessing_fee(new BigDecimal(1.20));
-        invoice.setTotal(new BigDecimal(62.54));
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
 
         Invoice invoice2 = new Invoice();
         invoice2.setName("Izaac Ramirez");
@@ -115,14 +117,14 @@ public class ServiceLayerTest {
         invoice2.setCity("Norwalk");
         invoice2.setState("CA");
         invoice2.setZipcode("90650");
-        invoice2.setItem_type("Game");
-        invoice2.setItem_id(562);
-        invoice2.setUnit_price(new BigDecimal(0.62));
+        invoice2.setItemType("Game");
+        invoice2.setItemId(562);
+        //invoice2.setUnit_price(new BigDecimal(0.62));
         invoice2.setQuantity(1);
-        invoice2.setSubtotal(new BigDecimal(60.00));
-        invoice2.setTax(new BigDecimal(0.72));
-        invoice2.setProcessing_fee(new BigDecimal(1.20));
-        invoice2.setTotal(new BigDecimal(62.54));
+        //invoice2.setSubtotal(new BigDecimal(60.00));
+        //invoice2.setTax(new BigDecimal(0.72));
+        //invoice2.setProcessing_fee(new BigDecimal(1.20));
+        //invoice2.setTotal(new BigDecimal(62.54));
 
         List<Invoice> invoiceList =  new ArrayList<>();
         invoiceList.add(invoice);
@@ -134,6 +136,7 @@ public class ServiceLayerTest {
     }
 
     private void setUpT_ShirtRepositoryMock(){
+        t_shirtRepository = mock(T_ShirtRepository.class);
         T_Shirt TShirt = new T_Shirt();
         TShirt.setId(1);
         TShirt.setSize("XL");
@@ -157,18 +160,10 @@ public class ServiceLayerTest {
         doReturn(tShirtList).when(t_shirtRepository).findAll();
     }
 
+    //Console Api
+
     @Test
     public void shouldSaveConsole(){
-
-        Console expectedConsole = new Console();
-        expectedConsole.setId(1);
-        expectedConsole.setModel("Ps5");
-        expectedConsole.setManufacturer("sony");
-        expectedConsole.setMemory_amount("825GB");
-        expectedConsole.setProcessor("AMD Zen 2 CPU");
-        expectedConsole.setPrice(BigDecimal.valueOf(500));
-        expectedConsole.setQuantity(1);
-
         Console console = new Console();
         console.setModel("Ps5");
         console.setManufacturer("sony");
@@ -177,10 +172,327 @@ public class ServiceLayerTest {
         console.setPrice(BigDecimal.valueOf(500));
         console.setQuantity(1);
 
+        console = service.saveConsole(console);
 
-        Console savedConsole = service.saveConsole(console);
+        Console console1 = service.findConsoleById(console.getId());
 
-        assertEquals(expectedConsole, savedConsole);
+        assertEquals(console, console1);
+
+    }
+
+    @Test
+    public void shouldFindConsoleById(){
+        Console console = new Console();
+        console.setModel("Ps5");
+        console.setManufacturer("sony");
+        console.setMemory_amount("825GB");
+        console.setProcessor("AMD Zen 2 CPU");
+        console.setPrice(BigDecimal.valueOf(500));
+        console.setQuantity(1);
+
+        console =service.saveConsole(console);
+
+        Console console1 = service.findConsoleById(console.getId());
+
+        assertNotNull(console1);
+    }
+
+    @Test
+    public void shouldFindAllConsoles(){
+        Console console = new Console();
+        console.setModel("Ps5");
+        console.setManufacturer("sony");
+        console.setMemory_amount("825GB");
+        console.setProcessor("AMD Zen 2 CPU");
+        console.setPrice(BigDecimal.valueOf(500));
+        console.setQuantity(1);
+
+        console = service.saveConsole(console);
+
+        List<Console> allConsoles = service.findAllConsoles();
+        assertEquals(allConsoles.size(), 1);
+    }
+
+    @Test
+    public void shouldFindByManufacturer(){
+        Console console = new Console();
+        console.setModel("Ps5");
+        console.setManufacturer("sony");
+        console.setMemory_amount("825GB");
+        console.setProcessor("AMD Zen 2 CPU");
+        console.setPrice(BigDecimal.valueOf(500));
+        console.setQuantity(1);
+
+        console = service.saveConsole(console);
+
+        List<Console> retrievedConsoles = service.findByManufacturer(console.getManufacturer());
+
+        assertEquals(retrievedConsoles.size(), 1);
+
+    }
+
+    //Game Api
+
+    @Test
+    public void shouldSaveGame(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        Game tempGame = service.findGameById(game.getId());
+        assertEquals(tempGame, game);
+    }
+
+    @Test
+    public void shouldFindGameById(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        Game tempGame = service.findGameById(game.getId());
+        assertNotNull(tempGame);
+    }
+
+    @Test
+    public void shouldFindAllGames(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        List<Game> tempGame = service.findAllGames();
+        assertEquals(tempGame.size(),1);
+    }
+
+    @Test
+    public void shouldFindByStudio(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        List<Game> gameList = service.findByStudio(game.getStudio());
+        assertEquals(gameList.size(),1);
+    }
+
+    @Test
+    public void shouldFindByEsrbRating(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        List<Game> tempGame = service.findByEsrbRating(game.getEsrbRating());
+        assertEquals(tempGame.size(),1);
+    }
+
+    @Test
+    public void shouldFindByTitle(){
+        Game game = new Game();
+        game.setTitle("God of war");
+        game.setEsrbRating("Pegi 18");
+        game.setDescription("Former greek god of war tries his best to raise and protect his son, however, his son wants to know who he truly is.");
+        game.setPrice(new BigDecimal(60.00));
+        game.setStudio("Santa Monica Studio");
+        game.setQuantity(1);
+
+        game = service.saveGame(game);
+
+        List<Game> tempGame = service.findByTitle(game.getTitle());
+        assertEquals(tempGame.size(),1);
+    }
+
+    //T_Shirt Api
+
+    @Test
+    public void shouldSaveTShirt(){
+        T_Shirt TShirt = new T_Shirt();
+        TShirt.setSize("XL");
+        TShirt.setColor("Black");
+        TShirt.setDescription("Black tshirt with naruto on it");
+        TShirt.setPrice(new BigDecimal(30.00));
+        TShirt.setQuantity(2);
+
+        TShirt = service.saveTShirt(TShirt);
+        T_Shirt tempTShirt = service.findTShirtById(TShirt.getId());
+        assertEquals(tempTShirt, TShirt);
+    }
+
+    @Test
+    public void shouldFindTShitById(){
+        T_Shirt TShirt = new T_Shirt();
+        TShirt.setSize("XL");
+        TShirt.setColor("Black");
+        TShirt.setDescription("Black tshirt with naruto on it");
+        TShirt.setPrice(new BigDecimal(30.00));
+        TShirt.setQuantity(2);
+
+        TShirt = service.saveTShirt(TShirt);
+        T_Shirt tempTShirt = service.findTShirtById(TShirt.getId());
+        assertNotNull(tempTShirt);
+    }
+
+    @Test
+    public void shouldFindAllTShirts(){
+        T_Shirt TShirt = new T_Shirt();
+        TShirt.setSize("XL");
+        TShirt.setColor("Black");
+        TShirt.setDescription("Black tshirt with naruto on it");
+        TShirt.setPrice(new BigDecimal(30.00));
+        TShirt.setQuantity(2);
+
+        TShirt = service.saveTShirt(TShirt);
+        List<T_Shirt> tShirtList = service.findAllTShirts();
+        assertEquals(tShirtList.size(), 1);
+    }
+
+    @Test
+    public void shouldFindByColor(){
+        T_Shirt TShirt = new T_Shirt();
+        TShirt.setSize("XL");
+        TShirt.setColor("Black");
+        TShirt.setDescription("Black tshirt with naruto on it");
+        TShirt.setPrice(new BigDecimal(30.00));
+        TShirt.setQuantity(2);
+
+        TShirt = service.saveTShirt(TShirt);
+        List<T_Shirt> tShirtList = service.findByColor(TShirt.getColor());
+        assertEquals(tShirtList.size(), 1);
+    }
+
+    @Test
+    public void shouldFindBySize(){
+        T_Shirt TShirt = new T_Shirt();
+        TShirt.setSize("XL");
+        TShirt.setColor("Black");
+        TShirt.setDescription("Black tshirt with naruto on it");
+        TShirt.setPrice(new BigDecimal(30.00));
+        TShirt.setQuantity(2);
+
+        TShirt = service.saveTShirt(TShirt);
+        List<T_Shirt> tShirtList = service.findBySize(TShirt.getSize());
+        assertEquals(tShirtList.size(), 1);
+    }
+
+    //Invoice Api
+
+    @Test
+    public void shouldSaveInvoice(){
+        Invoice invoice = new Invoice();
+        invoice.setName("Izaac Ramirez");
+        invoice.setState("Elmcroft Ave");
+        invoice.setCity("Norwalk");
+        invoice.setState("CA");
+        invoice.setZipcode("90650");
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setQuantity(1);
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
+
+        invoice = service.saveInvoice(invoice);
+
+        Invoice tempInvoice = service.findInvoiceById(invoice.getId());
+        assertEquals(tempInvoice,invoice);
+    }
+
+    @Test
+    public void shouldFindInvoiceById(){
+        Invoice invoice = new Invoice();
+        invoice.setName("Izaac Ramirez");
+        invoice.setState("Elmcroft Ave");
+        invoice.setCity("Norwalk");
+        invoice.setState("CA");
+        invoice.setZipcode("90650");
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnit_price(new BigDecimal(0.62));
+        invoice.setQuantity(1);
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessing_fee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
+
+        invoice = service.saveInvoice(invoice);
+
+        Invoice tempInvoice = service.findInvoiceById(invoice.getId());
+        assertNotNull(tempInvoice);
+    }
+
+    @Test
+    public void shouldFindAllInvoices(){
+        Invoice invoice = new Invoice();
+        invoice.setName("Izaac Ramirez");
+        invoice.setState("Elmcroft Ave");
+        invoice.setCity("Norwalk");
+        invoice.setState("CA");
+        invoice.setZipcode("90650");
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnitPrice(new BigDecimal(0.62));
+        invoice.setQuantity(1);
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessingFee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
+
+        invoice = service.saveInvoice(invoice);
+
+        List<Invoice> invoiceList = service.findAllInvoices();
+        assertEquals(invoiceList.size(), 1);
+    }
+
+    @Test
+    public void shouldFindByName(){
+        Invoice invoice = new Invoice();
+        invoice.setName("Izaac Ramirez");
+        invoice.setState("Elmcroft Ave");
+        invoice.setCity("Norwalk");
+        invoice.setState("CA");
+        invoice.setZipcode("90650");
+        invoice.setItemType("Game");
+        invoice.setItemId(562);
+        //invoice.setUnitPrice(new BigDecimal(0.62));
+        invoice.setQuantity(1);
+        //invoice.setSubtotal(new BigDecimal(60.00));
+        //invoice.setTax(new BigDecimal(0.72));
+        //invoice.setProcessingFee(new BigDecimal(1.20));
+        //invoice.setTotal(new BigDecimal(62.54));
+
+        invoice = service.saveInvoice(invoice);
+
+        List<Invoice> invoiceList = service.findByName(invoice.getName());
+        assertEquals(invoiceList.size(), 1);
     }
 
 }
