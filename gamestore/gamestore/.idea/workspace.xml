@@ -41,20 +41,7 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/izaacramirez/Desktop/Final-Project-JudeS-BrianR-ChiamakaU-IzaacR/gamestore/gamestore&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ServiceLayerTest.shouldFindByTitle">
-    <configuration name="GamestoreApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.GamestoreApplication" />
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ServiceLayerTest">
     <configuration name="ServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
@@ -70,6 +57,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceLayerTest.shouldFindByColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindByColor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceLayerTest.shouldFindByManufacturer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gamestore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.gamestore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
+      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
+      <option name="METHOD_NAME" value="shouldFindByManufacturer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ServiceLayerTest.shouldFindByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gamestore" />
       <extension name="coverage">
@@ -81,22 +100,6 @@
       <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
       <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
       <option name="METHOD_NAME" value="shouldFindByName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ServiceLayerTest.shouldFindBySize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gamestore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.gamestore.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.company.gamestore.service" />
-      <option name="MAIN_CLASS_NAME" value="com.company.gamestore.service.ServiceLayerTest" />
-      <option name="METHOD_NAME" value="shouldFindBySize" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +123,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServiceLayerTest" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindByManufacturer" />
         <item itemvalue="JUnit.ServiceLayerTest.shouldFindByTitle" />
         <item itemvalue="JUnit.ServiceLayerTest.shouldFindByName" />
-        <item itemvalue="JUnit.ServiceLayerTest" />
-        <item itemvalue="JUnit.ServiceLayerTest.shouldFindBySize" />
-        <item itemvalue="Application.GamestoreApplication" />
+        <item itemvalue="JUnit.ServiceLayerTest.shouldFindByColor" />
       </list>
     </recent_temporary>
   </component>

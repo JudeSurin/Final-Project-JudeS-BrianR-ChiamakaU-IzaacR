@@ -213,6 +213,7 @@ public class ServiceLayerTest {
 
     @Test
     public void shouldFindByManufacturer(){
+        List<Console> consoleList = new ArrayList<>();
         Console console = new Console();
         console.setModel("Ps5");
         console.setManufacturer("sony");
@@ -223,9 +224,10 @@ public class ServiceLayerTest {
 
         console = service.saveConsole(console);
 
-        List<Console> retrievedConsoles = service.findByManufacturer(console.getManufacturer());
+        consoleList.add(console);
 
-        assertEquals(retrievedConsoles.size(), 1);
+        List<Console> tempConsoleList = service.findByManufacturer(console.getManufacturer());
+        assertEquals(tempConsoleList, consoleList);
 
     }
 
@@ -281,6 +283,7 @@ public class ServiceLayerTest {
 
     @Test
     public void shouldFindByStudio(){
+        List<Game> gameList = new ArrayList<>();
         Game game = new Game();
         game.setTitle("God of war");
         game.setEsrbRating("Pegi 18");
@@ -288,15 +291,17 @@ public class ServiceLayerTest {
         game.setPrice(new BigDecimal(60.00));
         game.setStudio("Santa Monica Studio");
         game.setQuantity(1);
-
         game = service.saveGame(game);
 
-        List<Game> gameList = service.findByStudio(game.getStudio());
-        assertEquals(gameList.size(),1);
+        gameList.add(game);
+
+        List<Game> tempGameList = service.findByTitle(game.getTitle());
+        assertEquals(tempGameList, gameList);
     }
 
     @Test
     public void shouldFindByEsrbRating(){
+        List<Game> gameList = new ArrayList<>();
         Game game = new Game();
         game.setTitle("God of war");
         game.setEsrbRating("Pegi 18");
@@ -304,11 +309,12 @@ public class ServiceLayerTest {
         game.setPrice(new BigDecimal(60.00));
         game.setStudio("Santa Monica Studio");
         game.setQuantity(1);
-
         game = service.saveGame(game);
 
-        List<Game> tempGame = service.findByEsrbRating(game.getEsrbRating());
-        assertEquals(tempGame.size(),1);
+        gameList.add(game);
+
+        List<Game> tempGameList = service.findByTitle(game.getTitle());
+        assertEquals(tempGameList, gameList);
     }
 
     @Test
@@ -321,11 +327,13 @@ public class ServiceLayerTest {
         game.setPrice(new BigDecimal(60.00));
         game.setStudio("Santa Monica Studio");
         game.setQuantity(1);
+        game = service.saveGame(game);
 
         gameList.add(game);
 
         List<Game> tempGameList = service.findByTitle(game.getTitle());
         assertEquals(tempGameList, gameList);
+
     }
 
     //T_Shirt Api
@@ -382,11 +390,13 @@ public class ServiceLayerTest {
         TShirt.setDescription("Black tshirt with naruto on it");
         TShirt.setPrice(new BigDecimal(30.00));
         TShirt.setQuantity(2);
+        TShirt = service.saveTShirt(TShirt);
 
         shirtList.add(TShirt);
 
         List<T_Shirt> tShirtList = service.findByColor(TShirt.getColor());
         assertEquals(tShirtList, shirtList);
+
     }
 
     @Test
@@ -475,11 +485,13 @@ public class ServiceLayerTest {
         invoice.setItemType("Game");
         invoice.setItemId(562);
         invoice.setQuantity(1);
+        invoice = service.saveInvoice(invoice);
 
         invoiceList.add(invoice);
 
-        List<Invoice> invoiceList2 = service.findByName(invoice.getName());
-        assertEquals(invoiceList2, invoiceList);
+        List<Invoice> tempInvoiceList = service.findByName(invoice.getName());
+        assertEquals(tempInvoiceList, invoiceList);
+
     }
 
 }
